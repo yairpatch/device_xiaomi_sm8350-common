@@ -504,6 +504,12 @@ PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0 \
     android.hardware.thermal@2.0-service.qti
 
+# Thermal HAL
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@2.0-service.sm8350-common \
+    thermal_symlinks \
+    thermal_logd
+
 # Touchscreen
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml

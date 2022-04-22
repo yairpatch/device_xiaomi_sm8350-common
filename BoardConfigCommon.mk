@@ -190,6 +190,7 @@ SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
 BOARD_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
 BOARD_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/power-libperfmgr
+BOARD_SEPOLICY_DIRS += hardware/google/pixel-sepolicy/thermal
 
 # Soong
 SOONG_CONFIG_NAMESPACES += xiaomiSm8350Vars
