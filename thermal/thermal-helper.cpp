@@ -1248,11 +1248,7 @@ std::chrono::milliseconds ThermalHelper::thermalWatcherCallbackFunc(
             }
         }
 
-        if (sensor_status.severity != ThrottlingSeverity::NONE) {
-            LOG(INFO) << temp.name << ": " << temp.value << " degC";
-        } else {
-            LOG(VERBOSE) << temp.name << ": " << temp.value << " degC";
-        }
+        LOG(INFO) << temp.name << ": " << temp.value << " degC";
 
         // Start PID computation
         if (sensor_status.pid_request_map.size()) {
