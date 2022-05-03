@@ -366,9 +366,6 @@ vendor/firmware/a660_zap.b02
 vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
 
-# IFAA Service
--vendor/app/IFAAService/IFAAService.apk
-
 # IMS
 -system_ext/priv-app/ims/ims.apk
 system_ext/framework/vendor.qti.ims.factory-V1.0-java.jar
