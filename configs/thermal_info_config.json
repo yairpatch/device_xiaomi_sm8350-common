@@ -196,85 +196,21 @@
             "Multiplier":0.001
         },
         {
-            "Name":"gpuss-1-usr",
-            "Type":"GPU",
-            "HotThreshold":[
-                "NAN",
-                "NAN",
-                "NAN",
-                95.0,
-                "NAN",
-                "NAN",
-                125.0
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001
-        },
-        {
             "Name":"battery",
             "Type":"BATTERY",
             "HotThreshold":[
                 "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                60.0
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001
-        },
-        {
-            "Name":"quiet_therm",
-            "Type":"SKIN",
-            "HotThreshold":[
-                "NAN",
-                37.0,
-                41.0,
+                36.0,
+                40.0,
                 43.0,
                 45.0,
-                51.0,
-                55.0
-            ],
-            "HotHysteresis":[
-                0.0,
-                1.9,
-                1.9,
-                1.9,
-                1.9,
-                1.9,
-                1.9
+                46.0,
+                47.0
             ],
             "VrThreshold":"NAN",
             "Multiplier":0.001,
             "Monitor":true,
-            "SendPowerHint":true
-        },
-        {
-            "Name":"wifi_therm",
-            "Type":"POWER_AMPLIFIER",
-            "HotThreshold":[
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "NAN",
-                "53.0",
-                "NAN"
-            ],
-            "HotHysteresis":[
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                1.9,
-                0.0
-            ],
-            "VrThreshold":"NAN",
-            "Multiplier":0.001,
-            "Monitor":true
+            "SendPowerHint": true
         },
         {
             "Name":"usb",
@@ -285,7 +221,7 @@
                 "NAN",
                 "NAN",
                 "NAN",
-                "15.0",
+                "60.0",
                 "NAN"
             ],
             "HotHysteresis":[
@@ -302,7 +238,33 @@
             "Monitor":true
         },
         {
-            "Name":"cpu_therm",
+            "Name":"quiet_therm",
+            "Type":"SKIN",
+            "HotThreshold":[
+                "NAN",
+                42.0,
+                45.0,
+                47.0,
+                48.0,
+                49.0,
+                50.0
+            ],
+            "HotHysteresis":[
+                0.0,
+                1.9,
+                1.9,
+                1.9,
+                1.9,
+                1.9,
+                1.9
+            ],
+            "VrThreshold":"NAN",
+            "Multiplier":0.001,
+            "Monitor":true,
+            "SendPowerHint": true
+        },
+        {
+            "Name":"xo_therm",
             "Type":"UNKNOWN",
             "HotThreshold":[
                 "NAN",
@@ -312,15 +274,6 @@
                 "NAN",
                 "NAN",
                 "NAN"
-            ],
-            "HotHysteresis":[
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
             ],
             "VrThreshold":"NAN",
             "Monitor":true,
@@ -333,7 +286,7 @@
             "Type":"CPU"
         },
         {
-            "Name":"thermal-cpufreq-6",
+            "Name":"thermal-cpufreq-4",
             "Type":"CPU"
         },
         {
