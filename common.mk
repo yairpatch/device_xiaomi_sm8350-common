@@ -161,31 +161,36 @@ PRODUCT_PACKAGES += \
     XiaomiParts
 
 # Display
-PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@3.0-impl-qti-display \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
-    android.hardware.memtrack@1.0-impl \
-    android.hardware.memtrack@1.0-service \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.mapper@2.0.vendor \
+-include hardware/qcom-caf/sm8350/display/config/display-board.mk
+-include hardware/qcom-caf/sm8350/display/config/display-product.mk
+include vendor/qcom/opensource/commonsys-intf/display/config/display-interfaces-product.mk
+include vendor/qcom/opensource/commonsys-intf/display/config/display-product-system.mk
+include vendor/qcom/opensource/commonsys/display/config/display-product-commonsys.mk
 
 PRODUCT_PACKAGES += \
-    vendor.display.config@1.15.vendor \
-    vendor.display.config@2.0.vendor
-
-PRODUCT_PACKAGES += \
-    libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
-    libdisplayconfig.system \
-    libdisplayconfig.system.qti \
-    libqdMetaData \
-    libqdMetaData.system \
+    android.hardware.graphics.common-V1-ndk_platform \
+    android.hardware.graphics.common-V1-ndk_platform.vendor \
+    android.hardware.lights-service.qti \
+    libqdutils \
+    libqservice \
     libtinyxml \
-    memtrack.default
+    lights.qcom \
+    disable_configstore
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.has_wide_color_display=true \
+    ro.surface_flinger.has_HDR_display=true \
+    ro.surface_flinger.use_color_management=true \
+    ro.surface_flinger.wcg_composition_dataspace=143261696 \
+    ro.surface_flinger.protected_contents=true \
+    ro.surface_flinger.use_content_detection_for_refresh_rate=true \
+    ro.surface_flinger.set_touch_timer_ms=200 \
+    ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
+    ro.surface_flinger.max_virtual_display_dimension=4096 \
 
 # DRM
 PRODUCT_PACKAGES += \
