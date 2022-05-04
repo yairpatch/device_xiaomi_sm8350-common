@@ -577,7 +577,3 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libnl \
     libwfdaac_vendor
-
-# Debug
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.adb.secure=0
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += ro.debuggable=1
