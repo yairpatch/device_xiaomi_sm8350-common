@@ -499,11 +499,10 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
     frameworks/native/data/etc/android.software.sip.voip.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.sip.voip.xml
 
-# Thermal HAL
+# Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0-service.sm8350-common \
-    thermal_symlinks \
-    thermal_logd
+    android.hardware.thermal@2.0 \
+    android.hardware.thermal@2.0-service.qti
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
